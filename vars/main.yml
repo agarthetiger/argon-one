@@ -1,0 +1,8 @@
+---
+daemonname: argononed
+powerbuttonscript: /usr/bin/{{ daemonname }}.py
+shutdownscript: /lib/systemd/system-shutdown/{{ daemonname }}-poweroff.py
+daemonconfigfile: /etc/{{ daemonname }}.conf
+configscript: /usr/bin/argonone-config
+removescript: /usr/bin/argonone-uninstall
+daemonfanservice: /lib/systemd/system/{{ daemonname }}.service
